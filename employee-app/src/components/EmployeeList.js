@@ -47,7 +47,3 @@ class EmployeeList extends Component {
 }
 
 export default EmployeeList;
-
-// {people.data.results.map((person) => {
-//     return <li>{person.name.last}</li>
-// })}
