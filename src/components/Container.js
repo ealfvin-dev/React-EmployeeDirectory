@@ -15,9 +15,9 @@ class Container extends React.Component {
         })
     }
 
-    searchPhone = (num) => {
+    search = (term) => {
         const filteredEmployees = this.state.people.filter((person) => {
-            if(person.cell.includes(num)) {
+            if(person.cell.includes(term) || (person.name.first + " " + person.name.last).includes(term) || person.email.includes(term)) {
                 return person
             }
         });
@@ -27,7 +27,7 @@ class Container extends React.Component {
     render() {
         return (
             <div>
-                <Header search={this.searchPhone} />
+                <Header search={this.search} />
                 <EmployeeList people={this.state.filteredPeople}/>
             </div>
         )
