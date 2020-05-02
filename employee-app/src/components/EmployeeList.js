@@ -3,7 +3,6 @@ import '../App.css';
 
 class EmployeeList extends Component {
     render() {
-        console.log(this.props.people)
         return (
             <table>
                 <thead>
@@ -23,9 +22,9 @@ class EmployeeList extends Component {
                 </tr>
                 </thead>
                 <tbody>
-                {this.props.people.map((person) => {
+                {this.props.people.map((person, i) => {
                     return (
-                        <tr>
+                        <tr key={i}>
                             <td>
                                 <img src={person.picture.thumbnail} alt='Thumbnail image'/>
                             </td>

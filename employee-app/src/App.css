@@ -2,6 +2,10 @@
   text-align: center;
 }
 
-tr {
-  padding: 20px;
+td {
+  padding: 10px;
+}
+
+#exampleFormControlInput1 {
+  width: 15%;
 }
